@@ -14,3 +14,18 @@ body,
 body {
   background: #f0f0f0;
 }
+
+button {
+  font-size: 20px;
+  width: 10%;
+  background-color: transparent;
+  padding: 0.3rem;
+  color: black;
+  border: 2px solid black;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Karla', sans-serif;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
