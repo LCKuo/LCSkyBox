@@ -9,6 +9,9 @@ import { Box } from './components/Box'
 import { Skybox } from './components/Skybox'
 import { Loading } from './components/Loading'
 import { Terrain } from 'three-landscape'
+
+import Model from './Model';
+
 //https://s.studiobinder.com/wp-content/uploads/2019/11/360-Video-Featured-StudioBinder-Compressed.jpg
 //https://ictjournal.itri.org.tw/WebTools/Thumbnail.ashx?Siteid=654246032665636316&MmmID=654304432061644411&fd=Messagess_Pics&Pname=shutterstock_580893679.jpg&nw=600
 
@@ -34,9 +37,11 @@ export default function App() {
       <button onClick={gotoTaipower}>台電大林廠</button>
       <button onClick={gotoCloud}>天空</button>
 
-      <Canvas camera={{ fov: 50, far: 6000 }}>
+      <Canvas camera={{ fov: 60, far: 6000 }}>
         <ambientLight intensity={0.5} />
-
+        <Suspense fallback={null}>
+          <Model position={[0.025, -0.9, 1]} />
+        </Suspense>
         <OrbitControls maxDistance={2000} />
         <Suspense fallback={<Loading />}>
           <Skybox fog={false} url={Url} />
