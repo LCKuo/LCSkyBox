@@ -42,7 +42,6 @@ export default function App() {
 
         <OrbitControls maxDistance={2000} />
         <Suspense fallback={<Loading />}>
-          //<Model position={[0.025, -0.9, 1]} />
 
           <Skybox fog={false} url={Url} />
           <Environment preset="park" rotation={[0, Math.PI / 2, 0]} />
